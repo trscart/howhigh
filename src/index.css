@@ -1,1 +1,46 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+.hh_h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.hh_h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hh_h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.hh_p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hh_label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hh_color_purple {
+  color: #7c00ff;
+}
+
+.hh_color_red {
+  color: #ff0077;
+}
+
+.hh_color_green {
+  color: #16ffbd;
+}
+
+.hh_herobanner {
+  height: 100vh;
+}
+/*# sourceMappingURL=index.css.map */
