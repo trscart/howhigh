@@ -1,6 +1,6 @@
 $color_purple: #7c00ff;
 $color_red: #ff0077;
-$color_green: #16ffbd;
+$color_green: #10d69e; //#16ffbd    
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
@@ -8,43 +8,165 @@ $color_green: #16ffbd;
     font-family: "Nunito", sans-serif;
 }
 
-.hh_h1{
-    font-size: 32px;
+p, h1, h2 {
+    color: #444444;
+}
+
+.hh_h1 {
+    font-size: 42px;
     font-weight: 800;
 }
 
-.hh_h2{
-    font-size: 24px;
+.hh_h2 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.hh_p {
+    font-size: 26px;
     font-weight: 600;
 }
 
-.hh_h3{
-    font-size: 21px;
-    font-weight: 600;
-}
-
-.hh_p{
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.hh_label{
+.hh_label {
     font-size: 14px;
     font-weight: 600;
 }
 
-.hh_color_purple{
+.hh_color_purple {
     color: $color_purple;
 }
 
-.hh_color_red{
+.hh_color_red {
     color: $color_red;
 }
 
-.hh_color_green{
+.hh_color_green {
     color: $color_green;
+}
+
+.hh_red_bg{
+    background-color: $color_red;
+}
+
+.hh_purple_bg{
+    background-color: $color_purple;
+}
+
+.hh_green_bg{
+    background-color: $color_green;
+}
+
+.hh_button{
+    background-color: $color_red;
+    border-radius: 50px;
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    padding: 10px 50px;
+    transition: 0.3s;
+
+    &:hover {
+        color: white;
+        background-color: $color_purple;
+    }
+}
+
+.hh_button_red{
+    background-color: white;
+    color: $color_red;
+
+    &:hover {
+        color: $color_red;
+        background-color: white;
+    }
+}
+
+.hh_button_green{
+    background-color: white;
+    color: $color_green;
+
+    &:hover {
+        color: $color_green;
+        background-color: white;
+    }
+}
+
+.hh_button_purple{
+    background-color: white;
+    color: $color_purple;
+
+    &:hover {
+        color: $color_purple;
+        background-color: white;
+    }
+}
+
+.hh_navbar {
+    padding: 30px 100px;
+    transition: 0.3s;
+}
+
+.hh_navbar_scrolled {
+    padding: 15px 100px;
+    background-color: white;
+    box-shadow: 0 0rem 1rem rgba(0,0,0,0.1);
 }
 
 .hh_herobanner {
     height: 100vh;
+}
+
+.hh_hero_img{
+    width: 100%;
+}
+
+.hh_section_container{
+    padding: 100px 100px;
+}
+
+@media (max-width: 576px) {
+    .hh_h1 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+    
+    .hh_h2 {
+        font-size: 22px;
+        font-weight: 800;
+    }
+    
+    .hh_p {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    
+    .hh_label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .hh_button{
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+    
+    .hh_navbar {
+        padding: 30px 15px;
+    }
+
+    .hh_navbar_scrolled {
+        padding: 15px 15px;
+    }
+
+    .hh_herobanner {
+        height: auto;
+    }
+
+    .hh_hero_img{
+        width: 280px;
+    }
+
+    .hh_section_container{
+        padding: 50px 25px;
+    }
 }

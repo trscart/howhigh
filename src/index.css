@@ -3,24 +3,23 @@
   font-family: "Nunito", sans-serif;
 }
 
+p, h1, h2 {
+  color: #444444;
+}
+
 .hh_h1 {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 800;
 }
 
 .hh_h2 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.hh_h3 {
-  font-size: 21px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 800;
 }
 
 .hh_p {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .hh_label {
@@ -37,10 +36,127 @@
 }
 
 .hh_color_green {
-  color: #16ffbd;
+  color: #10d69e;
+}
+
+.hh_red_bg {
+  background-color: #ff0077;
+}
+
+.hh_purple_bg {
+  background-color: #7c00ff;
+}
+
+.hh_green_bg {
+  background-color: #10d69e;
+}
+
+.hh_button {
+  background-color: #ff0077;
+  border-radius: 50px;
+  font-size: 21px;
+  font-weight: 700;
+  color: white;
+  padding: 10px 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hh_button:hover {
+  color: white;
+  background-color: #7c00ff;
+}
+
+.hh_button_red {
+  background-color: white;
+  color: #ff0077;
+}
+
+.hh_button_red:hover {
+  color: #ff0077;
+  background-color: white;
+}
+
+.hh_button_green {
+  background-color: white;
+  color: #10d69e;
+}
+
+.hh_button_green:hover {
+  color: #10d69e;
+  background-color: white;
+}
+
+.hh_button_purple {
+  background-color: white;
+  color: #7c00ff;
+}
+
+.hh_button_purple:hover {
+  color: #7c00ff;
+  background-color: white;
+}
+
+.hh_navbar {
+  padding: 30px 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hh_navbar_scrolled {
+  padding: 15px 100px;
+  background-color: white;
+  -webkit-box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .hh_herobanner {
   height: 100vh;
+}
+
+.hh_hero_img {
+  width: 100%;
+}
+
+.hh_section_container {
+  padding: 100px 100px;
+}
+
+@media (max-width: 576px) {
+  .hh_h1 {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .hh_h2 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .hh_p {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .hh_label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .hh_button {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+  .hh_navbar {
+    padding: 30px 15px;
+  }
+  .hh_navbar_scrolled {
+    padding: 15px 15px;
+  }
+  .hh_herobanner {
+    height: auto;
+  }
+  .hh_hero_img {
+    width: 280px;
+  }
+  .hh_section_container {
+    padding: 50px 25px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
