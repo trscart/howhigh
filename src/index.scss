@@ -1,24 +1,48 @@
 $color_purple: #7c00ff;
 $color_red: #ff0077;
-$color_green: #10d69e; //#16ffbd    
+$color_green: #10d69e; //#16ffbd
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+
+.material-icons {
+    font-family: "Material Icons" !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
 
 * {
     font-family: "Nunito", sans-serif;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
     color: #444444;
 }
 
 .hh_h1 {
-    font-size: 42px;
+    font-size: 50px;
     font-weight: 800;
 }
 
 .hh_h2 {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 800;
 }
 
@@ -28,8 +52,8 @@ p, h1, h2 {
 }
 
 .hh_label {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .hh_color_purple {
@@ -44,60 +68,60 @@ p, h1, h2 {
     color: $color_green;
 }
 
-.hh_red_bg{
+.hh_red_bg {
     background-color: $color_red;
 }
 
-.hh_purple_bg{
+.hh_purple_bg {
     background-color: $color_purple;
 }
 
-.hh_green_bg{
+.hh_green_bg {
     background-color: $color_green;
 }
 
-.hh_button{
+.hh_button {
     background-color: $color_red;
-    border-radius: 50px;
-    font-size: 21px;
+    font-size: 26px;
     font-weight: 700;
     color: white;
-    padding: 10px 50px;
     transition: 0.3s;
+    padding: 10px 50px;
+    border-radius: 50px;
 
     &:hover {
         color: white;
-        background-color: $color_purple;
+        background-color: lighten($color_red, 8%);
     }
 }
 
-.hh_button_red{
-    background-color: white;
-    color: $color_red;
-
-    &:hover {
-        color: $color_red;
-        background-color: white;
-    }
-}
-
-.hh_button_green{
+.hh_button_green {
     background-color: white;
     color: $color_green;
 
     &:hover {
-        color: $color_green;
         background-color: white;
+        color: $color_green;
     }
 }
 
-.hh_button_purple{
+.hh_button_red {
+    background-color: white;
+    color: $color_red;
+
+    &:hover {
+        background-color: white;
+        color: $color_red;
+    }
+}
+
+.hh_button_purple {
     background-color: white;
     color: $color_purple;
 
     &:hover {
-        color: $color_purple;
         background-color: white;
+        color: $color_purple;
     }
 }
 
@@ -109,19 +133,49 @@ p, h1, h2 {
 .hh_navbar_scrolled {
     padding: 15px 100px;
     background-color: white;
-    box-shadow: 0 0rem 1rem rgba(0,0,0,0.1);
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.hh_banner {
+    position: fixed;
+    bottom: -200px;
+    background-color: $color_purple;
+    z-index: 1;
+    padding: 10px 100px;
+    transition: 0.4s;
+
+    span{
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+.hh_button_banner{
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color_purple;
+    transition: 0.3s;
+    padding: 5px 25px;
+    border-radius: 50px;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .hh_herobanner {
     height: 100vh;
+    background: url("./img/hh_rocket.gif") no-repeat bottom right;
+    background-size: 60%;
 }
 
-.hh_hero_img{
+.hh_hero_img {
     width: 100%;
 }
 
-.hh_section_container{
-    padding: 100px 100px;
+.hh_section_container {
+    padding: 100px 220px;
 }
 
 @media (max-width: 576px) {
@@ -129,27 +183,22 @@ p, h1, h2 {
         font-size: 40px;
         font-weight: 800;
     }
-    
+
     .hh_h2 {
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 800;
     }
-    
+
     .hh_p {
         font-size: 22px;
         font-weight: 600;
     }
-    
-    .hh_label {
-        font-size: 14px;
-        font-weight: 700;
+
+    .hh_button {
+        padding: 10px 25px;
+        font-size: 22px;
     }
 
-    .hh_button{
-        font-size: 18px;
-        padding: 10px 30px;
-    }
-    
     .hh_navbar {
         padding: 30px 15px;
     }
@@ -158,15 +207,24 @@ p, h1, h2 {
         padding: 15px 15px;
     }
 
-    .hh_herobanner {
-        height: auto;
+    .hh_banner {
+        padding: 10px 20px 20px 20px;
+
+        span{
+            position: relative;
+        }
     }
 
-    .hh_hero_img{
+    .hh_herobanner {
+        height: auto;
+        background: none;
+    }
+
+    .hh_hero_img {
         width: 280px;
     }
 
-    .hh_section_container{
+    .hh_section_container {
         padding: 50px 25px;
     }
 }
