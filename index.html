@@ -33,6 +33,9 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- style -->
     <link rel="stylesheet" href="./src/index.css">
 
@@ -55,6 +58,15 @@
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=3510907259020739&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH6MS2P84K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PH6MS2P84K');
+    </script>
 </head>
 
 <body>
@@ -92,14 +104,29 @@
     </div>
 
     <!-- herobanner -->
-    <div class="container hh_herobanner pb-5 pb-md-0">
+    <div class="container hh_herobanner">
         <div class="row h-100 align-items-center">
             <div class="col-md-7 d-flex flex-column">
                 <h1 class="hh_h1 hh_color_purple">Mi hanno chiesto dov'eri? <br> Ho risposto <red class="hh_color_red">
                         offline</red>
                 </h1>
-                <!-- <img src="./src/img/hh_rocket.gif" alt="howhigh rocket"
-                    class="d-md-none d-block align-self-center mb-4 hh_hero_img"> -->
+                <div class="d-none d-md-block">
+                    <p class="hh_p hh_color_purple">Ti aiutiamo a togliere la modalità aereo ✈️</p>
+                    <h2 class="hh_h2 hh_color_red">Pensiamo a tutto noi, portare la tua attività online è più veloce di
+                        bere
+                        un caffè ☕
+                    </h2>
+                    <button type="button" class="btn hh_button align-self-start mt-4">Scarica la guida gratuita
+                        👈</button>
+                </div>
+                <div class="hh_scroll_down"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5 d-block d-md-none" id="hh_scroll_to">
+        <div class="row">
+            <div class="col">
                 <p class="hh_p hh_color_purple">Ti aiutiamo a togliere la modalità aereo ✈️</p>
                 <h2 class="hh_h2 hh_color_red">Pensiamo a tutto noi, portare la tua attività online è più veloce di bere
                     un caffè ☕
@@ -133,7 +160,8 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <p class="hh_h1 hh_color_purple">La calamita per le tue entrate</p>
-                <p class="hh_h2 text-white mt-4">La Concorrenza è già online, ogni minuto che passa è un cliente perso 💸
+                <p class="hh_h2 text-white mt-4">La Concorrenza è già online, ogni minuto che passa è un cliente perso
+                    💸
                 </p>
                 <p class="hh_p text-white mt-4">Realizziamo campagne pubblicitarie online, massimizzando il tuo ritorno
                     di investimento.
@@ -166,25 +194,330 @@
         </div>
     </div>
 
-    <!-- footer -->
-    <footer class="container-fluid hh_section_container">
+    <!-- review -->
+    <div class="container-fluid hh_section_container">
         <div class="row">
+            <div class="col text-center">
+                <p class="hh_h1 hh_color_red">Dicono di noi 📢</p>
+                <div class="swiper-container p-3">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="hh_review_card card text-center border-0 shadow">
+                                <div class="card-body">
+                                    <p class="hh_h2">Marco F. - <b class="hh_color_green">Dentista</b></p>
+                                    <p class="hh_p">HowHigh più che di una semplice agenzia
+                                        digital, è un vero e proprio partner che ci ha accompagnato nel percorso di
+                                        esordio nel mondo web.
+                                        I servizi di HowHigh sono andati anche oltre le
+                                        nostre aspettative.
+                                        Mi sento di consigliare HowHigh senza alcun indugio.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hh_review_card card text-center border-0 shadow">
+                                <div class="card-body">
+                                    <p class="hh_h2">Paolo V. - <b class="hh_color_green">Ristoratore</b></p>
+                                    <p class="hh_p">Ci siamo rivolti a HowHigh per il design e
+                                        lo sviluppo del nuovo sito del ristorante e strategie di web marketing.
+                                        Cercavamo un partner serio ed
+                                        affidabile e HowHigh fin da subito ci ha fatto
+                                        un’ottima impressione. Il loro lavoro è sempre stato ben organizzato, rapido,
+                                        professionale ed attento alle nostre
+                                        diverse esigenze.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hh_review_card card text-center border-0 shadow">
+                                <div class="card-body">
+                                    <p class="hh_h2">Giulia D. - <b class="hh_color_green">Parrucchiera</b></p>
+                                    <p class="hh_p">Un’agenzia
+                                        estremamente valida per lo sviluppo del online marketing ed il miglioramento
+                                        delle
+                                        visibilità sul web. Siamo soddisfatti del lavoro svolto finora. C’è da parte
+                                        nostra la volontà di proseguire la
+                                        collaborazione in atto aggiungendo nuove attività e progetti.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- faq -->
+    <div class="container-fluid hh_section_container">
+        <div class="row align-items-center">
             <div class="col">
-                <img src="./src/img/logo.svg" alt="howhigh logo" width="120">
-                <a href="mailto:hello@howhigh.it">
-                    <p class="hh_h2 hh_color_purple mt-3">hello@howhigh.it</p>
+                <p class="hh_h1 text-center hh_color_purple">Ti togliamo ogni dubbio</p>
+                <div class="accordion" id="hh_faq_accordion">
+                    <div class="card hh_collapse_card" id="hh_collapse_card1">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse1" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse1" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse1">
+                                    Perché dovrei scegliere HowHigh?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon1">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse1" class="collapse" aria-labelledby="hh_faq_title_collapse1"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                HowHigh è una delle <b>migliori Agenzie Web sul panorama nazionale</b>.
+                                <br><br>
+                                <b>Pensiamo a tutto noi</b>, saremo al tuo fianco passo dopo passo per il tuo debutto
+                                sul web.
+                                Crediamo nella soddisfazione del cliente, <b>la tua crescita è il nostro unico
+                                    obiettivo</b>.
+                                <br><br>
+                                Investiamo costantemente per la formazione e la crescita del nostro team, così come
+                                nell’acquisto di nuovi software, con l’obiettivo di offrirti strategie
+                                e consulenze all’avanguardia.
+                                <br><br>
+                                Pensiamo a tutto noi! La nostra agenzia si propone come <b>tuo partner "chiavi in
+                                    mano"</b> per progetti
+                                digitali.
+                                Offriamo infatti un ampio ventaglio di servizi che ci consentono di seguire in prima
+                                persona ogni aspetto legato al tuo progetto. Dall’analisi alla definizione della
+                                strategia,
+                                dal design allo sviluppo, fino alla promozione e misurazione delle varie attività di web
+                                marketing.
+                                <br><br>
+                                Affidandoti ad HowHigh avrai un <b>unico e diretto referente con cui interagire in
+                                    maniera chiara</b>, snellendo i tempi di lavorazione grazie a un flusso di lavoro
+                                fluido e
+                                veloce, <b>abbattendo i costi e massimizzando il ritorno sull’investimento</b>, grazie
+                                all'esperienza maturata nei processi di promozione e acquisizione
+                                clienti.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card hh_collapse_card" id="hh_collapse_card7">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse7" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse7" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse7">
+                                    Come posso contattarvi?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon7">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse7" class="collapse" aria-labelledby="hh_faq_title_collapse7"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                Puoi contattarci scrivendoci alla mail <a href="mailto:hello@howhigh.it"
+                                    class="hh_color_purple">hello@howhigh.it</a> o compilando il form nella
+                                pagina <a href="./contatti.html" class="hh_color_purple">contatti</a>.
+                                <br><br>
+                                Ti risponderemo il prima possibile e se
+                                vorrai organizzeremo una chiamata completamente gratuita in cui andremo ad analizzare
+                                insieme il tuo business.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card hh_collapse_card" id="hh_collapse_card2">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse2" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse2" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse2">
+                                    Si, ma quanto costa?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon2">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse2" class="collapse" aria-labelledby="hh_faq_title_collapse2"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                <b>Non c’è una formula standard, né un costo standard.</b> Il costo di un sito "one
+                                page" sarà differente da quello di un sito vetrina o di un e-commerce. Il costo di un
+                                progetto digitale dipende dalla sua complessità e dalle
+                                eventuali particolari richieste.
+                                <br><br>
+                                <b>Cercheremo insieme di massimizzare i tuoi obiettivi con il budget a tua
+                                    disposizione.</b>
+                                Crediamo nella soddisfazione del cliente, la tua crescita è il nostro unico obiettivo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card hh_collapse_card" id="hh_collapse_card3">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse3" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse3" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse3">
+                                    Ho una piccola attività, può servirmi un sito web?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon3">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse3" class="collapse" aria-labelledby="hh_faq_title_collapse3"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                <b>Essere presenti sul web non è più un optional per nessuno! <br>
+                                    Un possibile cliente ti
+                                    cercherà su internet e se tu non ci sarai, andrà dalla concorrenza.</b>
+                                <br><br>
+                                Avere un sito web
+                                <b>aumenta la tua visibilità</b> e ti da la possibilità di raggiungere <b>clienti sempre
+                                    nuovi</b>,
+                                instaurare con loro un legame di fiducia reciproca e <b>aumentare in modo esponenziale
+                                    le
+                                    tue entrate</b>. Ciò non toglie che l’efficacia
+                                del tuo sito web dipenda
+                                anche da altri fattori, quali, ad esempio, l’adeguatezza o meno del tuo servizio, la
+                                creazione di contenuti interessanti per il tuo pubblico, ...<br>
+                                <b>Ma per questo ci siamo noi!</b>
+                                <br><br>
+                                <a class="hh_color_purple"
+                                    href="https://www.ansa.it/pressrelease/economia/2020/10/14/covid-19-ed-e-commerce-la-crescita-degli-acquisti-online_056dc908-615d-4cd4-a59e-58e887f9f4b1.html">Leggi
+                                    l'articolo sull'ANSA</a>👈
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card hh_collapse_card" id="hh_collapse_card4">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse4" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse3" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse4">
+                                    Ho già un sito ma non ottengo risultati, perché?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon4">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse4" class="collapse" aria-labelledby="hh_faq_title_collapse4"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                <b>I motivi possono essere vari.</b> Per rispondere a questa domanda sarà necessario
+                                analizzare
+                                il sito da un punto di vista SEO, di esperienza utente, di contenuti e servizio
+                                proposto.
+                                <br><br>
+                                Puoi contattarci scrivendoci alla mail <a href="mailto:hello@howhigh.it"
+                                    class="hh_color_purple">hello@howhigh.it</a> o compilando il form nella
+                                pagina <a href="./contatti.html" class="hh_color_purple">contatti</a> e se
+                                vorrai organizzeremo una <b>chiamata completamente gratuita in cui andremo ad analizzare
+                                    insieme il tuo business</b>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card hh_collapse_card" id="hh_collapse_card5">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse5" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse5" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse5">
+                                    E' utile fare pubblicità online?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon5">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse5" class="collapse" aria-labelledby="hh_faq_title_collapse5"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                Certo, ma per evitare investimenti sbaglaiti, la prima cosa da valutare quando si pensa
+                                di fare pubblicità online, come per ogni
+                                azione di marketing, è <b>quale obiettivo abbiamo e quanto possiamo investire.</b>
+                                <br><br>
+                                Se deciderai di affidarti a noi di HowHigh, <b>realizzeremo per te campagne
+                                    pubblicitarie</b>
+                                online, massimizzando il tuo ritorno di investimento.
+                                Intercetteremo le persone giuste proponendogli la tua attività e le trasformeremo in
+                                <b>contatti qualificati e clienti, aumentando notevolemente la tua visibilità e le tue
+                                    entrate.</b>
+                                <br><br>
+                                Crediamo nella soddisfazione del cliente, <b>la tua crescita è il nostro unico
+                                    obiettivo.</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card hh_collapse_card" id="hh_collapse_card6">
+                        <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
+                            <h2 class="mb-0">
+                                <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse6" type="button"
+                                    data-toggle="collapse" data-target="#hh_faq_collapse6" aria-expanded="true"
+                                    aria-controls="hh_faq_collapse6">
+                                    Quanto budget occorre per fare pubblicità online?
+                                </button>
+                            </h2>
+                            <span class="material-icons hh_faq_icon" id="hh_faq_icon6">
+                                keyboard_arrow_down
+                            </span>
+                        </div>
+
+                        <div id="hh_faq_collapse6" class="collapse" aria-labelledby="hh_faq_title_collapse5"
+                            data-parent="#hh_faq_accordion">
+                            <div class="card-body hh_p">
+                                <b>Non c’è una formula standard, né un costo standard.</b>
+                                <br><br>
+                                Ti chideremo quanto vuoi investire per ideare una strategia di web marketing che possa
+                                essere
+                                adatta al tipo di spesa che puoi sostenere. Certamente,
+                                maggiore sarà il budget da investire, maggiori saranno le possibilità di pianificare e
+                                realizzare obiettivi di business.
+                                <br><br>
+                                <b>Noi comunque cercheremo di massimizzare i tuoi obiettivi con il budget a tua
+                                    disposizione.</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="container-fluid hh_section_container hh_purple_bg py-5">
+        <div class="row">
+            <div class="col-md-9">
+                <a href="./index.html"><img src="./src/img/logo_white.svg" alt="howhigh logo" width="120"></a>
+                <a href="mailto:hello@howhigh.it" class="hh_footer_email">
+                    <p class="hh_h2 hh_color_green mt-3">hello@howhigh.it</p>
                 </a>
-                <a href="#">
-                    <p class="hh_label hh_color_purple">Termini e condizioni</p>
+            </div>
+            <div class="col-md-3">
+                <!-- <a href="#" class="hh_footer_link">
+                    <p class="hh_label text-white">Termini e condizioni</p>
+                </a> -->
+                <a href="./privacy-policy.html" class="hh_footer_link">
+                    <p class="hh_label text-white">Privacy Policy</p>
                 </a>
-                <a href="#">
-                    <p class="hh_label hh_color_purple">Policy</p>
-                </a>
-                <p class="hh_label">Copyright © 2020 HowHigh</p>
+                <p class="hh_label mb-0 text-white">P.I. 15728981000</p>
+                <p class="hh_label mb-0 text-white">Copyright © 2020 HowHigh</p>
             </div>
         </div>
     </footer>
 
+    <!-- scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/index.js"></script>
 </body>
 

@@ -39,7 +39,7 @@ h2 {
 
 body {
     background-color: #fdfcff;
-} 
+}
 
 .hh_h1 {
     font-size: 50px;
@@ -62,7 +62,7 @@ body {
 }
 
 .hh_color_purple {
-    color: $color_purple;
+    color: $color_purple !important;
 }
 
 .hh_color_red {
@@ -83,6 +83,10 @@ body {
 
 .hh_green_bg {
     background-color: $color_green;
+}
+
+.hh_border_purple {
+    border-color: $color_purple !important;
 }
 
 .hh_button {
@@ -149,13 +153,13 @@ body {
     padding: 15px 100px;
     transition: 0.4s;
 
-    span{
+    span {
         position: absolute;
         cursor: pointer;
     }
 }
 
-.hh_button_banner{
+.hh_button_banner {
     background-color: white;
     font-size: 16px;
     font-weight: 700;
@@ -175,14 +179,131 @@ body {
     background-size: 60%;
 }
 
-.hh_hero_img {
-    width: 100%;
+.hh_scroll_down {
+    //border: 3px solid $color_purple;
+    border-radius: 20px;
+    bottom: -80px;
+    height: 50px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 30px;
+}
+.hh_scroll_down::before {
+    -webkit-animation: scrollDownAnimation 2s infinite;
+    animation: scrollDownAnimation 2s infinite;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid $color_red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@-webkit-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        -webkit-transform: translate(0, 35px);
+        transform: translate(0, 35px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        -webkit-transform: translate(0, 35px);
+        transform: translate(0, 35px);
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .hh_section_container {
     padding: 100px 220px;
-    p:first-child{
+    p:first-child {
         line-height: 1.2;
+    }
+}
+
+.swiper-container {
+    z-index: 0;
+    max-width: 900px;
+    height: 100%;
+
+    .hh_review_card{
+        border-radius: 25px;
+    }
+}
+
+.hh_swiper_bullets {
+    background-color: $color_purple;
+    opacity: 1;
+}
+
+#hh_faq_accordion {
+    .hh_collapse_card {
+        border: 2px solid #dcdcdc;
+        border-radius: 25px;
+        margin-bottom: 15px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}
+
+.hh_faq_title {
+    text-align: left;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.hh_faq_icon {
+    transition: 0.3s;
+}
+
+.hh_faq_icon_rotate {
+    transform: rotate(-180deg);
+}
+
+.hh_collapse_header {
+    background-color: transparent;
+}
+
+.hh_footer_link{
+    &:hover{
+        text-decoration-color: white;
+    }
+}
+
+.hh_footer_email{
+    &:hover{
+        text-decoration-color: $color_green;
     }
 }
 
@@ -202,8 +323,12 @@ body {
         font-weight: 600;
     }
 
+    .hh_label {
+        font-size: 18px;
+    }
+
     .hh_button {
-        padding: 10px 25px;
+        padding: 10px 15px;
         font-size: 22px;
     }
 
@@ -218,14 +343,17 @@ body {
     .hh_banner {
         padding: 10px 20px 20px 20px;
 
-        span{
+        span {
             position: relative;
         }
     }
 
     .hh_herobanner {
-        height: 90vh;
-        background-position-x: 160px;
+        h1 {
+            font-size: 54px;
+        }
+        height: 80vh;
+        background-position-x: 170px;
         background-size: 100%;
     }
 
@@ -237,5 +365,21 @@ body {
 @media (min-width: 576px) and (max-width: 1200px) {
     .hh_section_container {
         padding: 100px 50px;
+    }
+}
+
+@media (min-width: 576px) {
+    #hh_faq_accordion {
+        .hh_collapse_card {
+            &:hover {
+                border-color: $color_purple;
+                .hh_faq_icon {
+                    color: $color_purple;
+                }
+                .hh_faq_title {
+                    color: $color_purple;
+                }
+            }
+        }
     }
 }
