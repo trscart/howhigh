@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Hello Developer")
 
-    $("form").submit(function () {
-        fbq('track', 'CompleteRegistration');
-    })
-
     // animazione navbar scroll
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0) {
@@ -34,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // swiper recensioni
-    if (!(window.location.href.indexOf("privacy") > 0)) {
+    if (!(window.location.href.indexOf("privacy") > 0) && !(window.location.href.indexOf("guida") > 0)) {
         var swiper = new Swiper('.swiper-container', {
             loop: true,
             disableOnInteraction: true,
@@ -55,23 +51,94 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.swiper-slide').on('mouseout', function () {
             swiper.autoplay.start();
         });
+
+        // ultimi articoli blog
+        $.ajax({
+            url: "https://www.howhigh.it/blog/wp-json/wp/v2/posts",
+            type: 'GET',
+            contentType: 'application/json',
+            success: function (res) {
+                console.log(res)
+                res.forEach(function (el, i) {
+                    if (i < 3) {
+                        let media_url
+                        $.ajax({
+                            url: "https://www.howhigh.it/blog/wp-json/wp/v2/media/" + el.featured_media,
+                            type: 'GET',
+                            contentType: 'application/json',
+                            success: function (res) {
+                                console.log(res)
+                                media_url = res.source_url
+                                $("#hh_blog_section").append(`
+                                    <div class="col-md-4">
+                                        <div class="hh_blog_card card text-center border-0 shadow mt-5 mt-md-0">
+                                            <div class="card-body">
+                                                <img src="` + media_url + `" alt="blog image" style="width: 100%">
+                                                <p class="hh_h2">` + el.title.rendered + `</p>
+                                                <a class="hh_p hh_color_purple" href="` + el.link + `">Leggi di più</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `)
+                            },
+                            error: function (err) {
+                                console.log(err)
+                            }
+                        })
+                    }
+                })
+
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
     }
 
     //animazione collapse faqs
-    let collapse_opened = true
+    let collapsed = false
+    let id_clicked
     $(".hh_collapse_card").click(function (e) {
         e.stopPropagation()
-        $(this).toggleClass("hh_border_purple");
-        let id_num = $(this).attr("id").slice(-1)
-        $("#hh_faq_icon" + id_num).toggleClass("hh_faq_icon_rotate");
-        $("#hh_faq_title_collapse" + id_num).toggleClass("hh_color_purple");
-        $("#hh_faq_icon" + id_num).toggleClass("hh_color_purple");
-        if (collapse_opened) {
-            $('#hh_faq_collapse' + id_num).collapse("show")
-            collapse_opened = false
+        if (collapsed && id_clicked == $(this).attr("id").slice(-1)) {
+            $(this).removeClass("hh_border_purple");
+            $("#hh_faq_icon" + id_clicked).removeClass("hh_faq_icon_rotate");
+            $("#hh_faq_title_collapse" + id_clicked).removeClass("hh_color_purple");
+            $("#hh_faq_icon" + id_clicked).removeClass("hh_color_purple");
+            $('#hh_faq_collapse' + id_clicked).collapse("toggle")
+            collapsed = false
         } else {
-            $('#hh_faq_collapse' + id_num).collapse("hide")
-            collapse_opened = true
+            collapsed = true
+            $(".hh_collapse_card").removeClass("hh_border_purple");
+            $(this).addClass("hh_border_purple");
+            let id_num = $(this).attr("id").slice(-1)
+            id_clicked = id_num
+            $(".hh_faq_icon").removeClass("hh_faq_icon_rotate");
+            $("#hh_faq_icon" + id_num).addClass("hh_faq_icon_rotate");
+            $(".hh_faq_title").removeClass("hh_color_purple");
+            $("#hh_faq_title_collapse" + id_num).addClass("hh_color_purple");
+            $(".hh_faq_icon").removeClass("hh_color_purple");
+            $("#hh_faq_icon" + id_num).addClass("hh_color_purple");
+            $('#hh_faq_collapse' + id_num).collapse("toggle")
         }
     });
+
+    $(".hh_input").focus(function () {
+        $("label[for=" + $(this).attr("id") + "]").addClass("hh_color_purple")
+    })
+    $(".hh_input").focusout(function () {
+        $("label[for=" + $(this).attr("id") + "]").removeClass("hh_color_purple")
+    })
+
+    // al submit della form di contatto, evento facebook
+    $("#mc-embedded-subscribe-form").submit(function (e) {
+        fbq('track', 'Purchase', { currency: "EUR", value: 0.00 });
+    })
+
+    // al submit della form di contatto, evento facebook
+    /* window.addEventListener("klaviyoForms", function (e) {
+        if (e.detail.type == 'submit' || e.detail.type == 'redirectedToUrl') {
+            fbq('track', 'Purchase', { currency: "EUR", value: 0.00 });
+        }
+    }); */
 })

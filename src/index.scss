@@ -100,7 +100,7 @@ body {
 
     &:hover {
         color: white;
-        background-color: lighten($color_red, 8%);
+        background-color: $color_purple;
     }
 }
 
@@ -134,9 +134,78 @@ body {
     }
 }
 
+.hh_input {
+    border-radius: 50px;
+    box-shadow: 0;
+    transition: 0.2s;
+
+    &:focus {
+        box-shadow: 0 0 0 0.18rem $color_purple;
+    }
+}
+
+.hh_no_decoration{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.hh_social_icon {
+    color: white;
+    font-size: 22px !important;
+    transition: 0.3s;
+    padding: 0 10px;
+
+    &:hover {
+        text-decoration: none;
+        color: $color_green;
+    }
+}
+
+.hh_social_icon_nav {
+    color: rgba(0,0,0,.5);
+    font-size: 22px !important;
+    transition: 0.3s;
+    padding: 0 10px;
+
+    &:hover {
+        text-decoration: none;
+        color: $color_purple;
+    }
+}
+
+label {
+    transition: 0.2s;
+}
+
 .hh_navbar {
     padding: 30px 100px;
     transition: 0.3s;
+
+    .hh_nav_item {
+    
+        &:hover {
+            color: $color_purple !important;
+        }
+    }
+}
+
+.hh_nav_button {
+    border: 0;
+
+    span {
+        font-size: 40px;
+        color: $color_purple;
+
+        &:hover {
+            color: $color_red;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .hh_navbar_scrolled {
@@ -251,12 +320,16 @@ body {
     }
 }
 
+.hh_blog_card{
+    border-radius: 25px;
+}
+
 .swiper-container {
     z-index: 0;
     max-width: 900px;
     height: 100%;
 
-    .hh_review_card{
+    .hh_review_card {
         border-radius: 25px;
     }
 }
@@ -295,14 +368,14 @@ body {
     background-color: transparent;
 }
 
-.hh_footer_link{
-    &:hover{
+.hh_footer_link {
+    &:hover {
         text-decoration-color: white;
     }
 }
 
-.hh_footer_email{
-    &:hover{
+.hh_footer_email {
+    &:hover {
         text-decoration-color: $color_green;
     }
 }

@@ -97,7 +97,7 @@ body {
 
 .hh_button:hover {
   color: white;
-  background-color: #ff298d;
+  background-color: #7c00ff;
 }
 
 .hh_button_green {
@@ -130,10 +130,83 @@ body {
   color: #7c00ff;
 }
 
+.hh_input {
+  border-radius: 50px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.hh_input:focus {
+  -webkit-box-shadow: 0 0 0 0.18rem #7c00ff;
+          box-shadow: 0 0 0 0.18rem #7c00ff;
+}
+
+.hh_no_decoration {
+  text-decoration: none;
+}
+
+.hh_no_decoration:hover {
+  text-decoration: none;
+}
+
+.hh_social_icon {
+  color: white;
+  font-size: 22px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+.hh_social_icon:hover {
+  text-decoration: none;
+  color: #10d69e;
+}
+
+.hh_social_icon_nav {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 22px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+.hh_social_icon_nav:hover {
+  text-decoration: none;
+  color: #7c00ff;
+}
+
+label {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .hh_navbar {
   padding: 30px 100px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.hh_navbar .hh_nav_item:hover {
+  color: #7c00ff !important;
+}
+
+.hh_nav_button {
+  border: 0;
+}
+
+.hh_nav_button span {
+  font-size: 40px;
+  color: #7c00ff;
+}
+
+.hh_nav_button span:hover {
+  color: #ff0077;
+}
+
+.hh_nav_button:focus {
+  outline: none;
 }
 
 .hh_navbar_scrolled {
@@ -252,6 +325,10 @@ body {
 
 .hh_section_container p:first-child {
   line-height: 1.2;
+}
+
+.hh_blog_card {
+  border-radius: 25px;
 }
 
 .swiper-container {

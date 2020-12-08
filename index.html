@@ -8,21 +8,26 @@
     <link rel="icon" href="./src/img/logo.svg">
 
     <!-- Primary Meta Tags -->
-    <title>HowHigh - Agenzia Web</title>
-    <meta name="title" content="">
-    <meta name="description" content="">
+    <title>Agenzia Web Roma | Siti Web e Ecommerce | Web Marketing</title>
+    <meta name="title" content="HowHigh Studio - Agenzia Web Roma">
+    <meta name="description"
+        content="Mi hanno chiesto dov'eri? Ho risposto offline! Pensiamo a tutto noi, portare la tua attività online è più veloce di bere un caffè">
+    <meta name="keywords"
+        content="howhigh, howhigh studio, web design, sviluppo web, agenzia web, agenzia web roma, social media marketing, facebook ads, google ads, business online, advertising, attività online, attività offiline">
     <!-- Open Graph / Facebook -->
     <meta property="og:site_name" content="howhigh.it">
     <meta property="og:type" content="howhigh.it">
     <meta property="og:url" content="https://howhigh.it">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="https://howhigh.it/src/img/logo.svg">
+    <meta property="og:title" content="HowHigh Studio - Agenzia Web Roma">
+    <meta property="og:description"
+        content="Mi hanno chiesto dov'eri? Ho risposto offline! Pensiamo a tutto noi, portare la tua attività online è più veloce di bere un caffè">
+    <meta property="og:image" content="https://howhigh.it/src/img/logo_white.jpg">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://howhigh.it/src/img/logo.svg" />
+    <meta name="twitter:title" content="HowHigh Studio - Agenzia Web Roma" />
+    <meta name="twitter:description"
+        content="Mi hanno chiesto dov'eri? Ho risposto offline! Pensiamo a tutto noi, portare la tua attività online è più veloce di bere un caffè" />
+    <meta name="twitter:image" content="https://howhigh.it/src/img/logo_white.jpg" />
 
     <!-- bootstrap e jquery -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -38,6 +43,8 @@
 
     <!-- style -->
     <link rel="stylesheet" href="./src/index.css">
+    <!-- social icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -67,26 +74,51 @@
 
         gtag('config', 'G-PH6MS2P84K');
     </script>
+    <!-- Hotjar Tracking Code for https://www.howhigh.it/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 2135467, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top hh_navbar">
-        <a class="navbar-brand" href="./index.html">
+    <nav class="navbar navbar-expand-md sticky-top hh_navbar navbar-light">
+        <a class="navbar-brand" href="./index.html" title="homepage">
             <img src="./src/img/logo.svg" alt="howhigh logo" width="120">
         </a>
-        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler hh_nav_button" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="material-icons">
+                menu
+            </span>
         </button>
 
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav pt-3 pt-md-0">
+                <li class="nav-item mr-md-3">
+                    <a class="nav-link hh_p hh_nav_item" title="blog" href="./blog">Blog</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link hh_p hh_nav_item" title="contattaci" href="#hh_contact_section">Contattaci</a>
+                </li>
+                <div class="ml-0 ml-md-4 py-3 d-flex align-items-center">
+                    <a href="https://www.linkedin.com/company/69747077" title="linkedin"
+                        class="fa fa-linkedin hh_social_icon_nav"></a>
+                    <a href="https://www.instagram.com/howhighstudio/" title="instagram"
+                        class="fa fa-instagram hh_social_icon_nav"></a>
+                    <a href="https://www.facebook.com/howhighstudio" title="facebook"
+                        class="fa fa-facebook hh_social_icon_nav"></a>
+                </div>
             </ul>
-        </div> -->
+        </div>
     </nav>
 
     <!-- banner -->
@@ -97,8 +129,9 @@
                     close
                 </span>
                 <p class="hh_p text-white m-0">Vuoi scoprire come portare la tua attività online?</p>
-                <a href="#"><button type="button" class="btn hh_button_banner align-self-start mt-2">Scarica la
-                        guida gratuita 👈</button></a>
+                <a href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                    title="contattaci"><button type="button"
+                        class="btn hh_button_banner align-self-start mt-2">Contattaci su Whatsapp 👈</button></a>
             </div>
         </div>
     </div>
@@ -116,8 +149,9 @@
                         bere
                         un caffè ☕
                     </h2>
-                    <button type="button" class="btn hh_button align-self-start mt-4">Scarica la guida gratuita
-                        👈</button>
+                    <a href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                        title="contattaci"><button type="button" class="btn hh_button align-self-start mt-4">Contattaci
+                            su Whatsapp 👈</button></a>
                 </div>
                 <div class="hh_scroll_down"></div>
             </div>
@@ -131,7 +165,9 @@
                 <h2 class="hh_h2 hh_color_red">Pensiamo a tutto noi, portare la tua attività online è più veloce di bere
                     un caffè ☕
                 </h2>
-                <button type="button" class="btn hh_button align-self-start mt-4">Scarica la guida gratuita 👈</button>
+                <a href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                    title="contattaci"><button type="button"
+                        class="btn hh_button hh_button align-self-start mt-4">Contattaci su Whatsapp 👈</button></a>
             </div>
         </div>
     </div>
@@ -140,14 +176,17 @@
     <div class="container-fluid hh_section_container hh_red_bg">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <p class="hh_h1" style="color: #0fe5a8;">www.noncisei.it</p>
+                <a href="./non-ci-sei.html" title="non ci sei" class="hh_no_decoration">
+                    <p class="hh_h1" style="color: #0fe5a8;">www.noncisei.it</p>
+                </a>
                 <p class="hh_h2 text-white mt-4">Ti cercano ma non ci sei. Sono tutti online, manchi solo tu! 🔍</p>
                 <p class="hh_p text-white mt-4">Realizziamo prodotti digitali accattivanti su misura per te (siti web,
                     eCommerce, ...), miglioriamo l’immagine e aumentiamo la visibilità della tua attività, per
                     presentarti al meglio
                     sul web</p>
-                <button type="button" class="btn hh_button hh_button_red align-self-start mt-4">Scarica la
-                    guida gratuita 👈</button>
+                <a href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                    title="contattaci"><button type="button"
+                        class="btn hh_button hh_button_red align-self-start mt-4">Contattaci su Whatsapp 👈</button></a>
             </div>
             <div class="col-md-6">
                 <img src="./src/img/hh_ws.gif" alt="howhigh website" class="w-100">
@@ -167,8 +206,10 @@
                     di investimento.
                     Intercettiamo le persone giuste proponendogli la tua attività e le trasformiamo in contatti
                     qualificati e clienti</p>
-                <button type="button" class="btn hh_button hh_button_green align-self-start mt-4">Scarica la
-                    guida gratuita 👈</button>
+                <a href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                    title="contattaci"><button type="button"
+                        class="btn hh_button hh_button_green align-self-start mt-4">Contattaci su Whatsapp
+                        👈</button></a>
             </div>
             <div class="col-md-6">
                 <img src="./src/img/hh_ads.gif" alt="howhigh ads" class="w-100">
@@ -185,12 +226,25 @@
                 <p class="hh_p text-white mt-4">Crediamo nella soddisfazione del cliente, la tua crescita è il nostro
                     unico obiettivo. Pensiamo a tutto noi, saremo al tuo fianco passo dopo passo per il tuo debutto sul
                     web</p>
-                <button type="button" class="btn hh_button hh_button_purple align-self-start mt-4">Scarica la
-                    guida gratuita 👈</button>
+                <a href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                    title="contattaci"><button type="button"
+                        class="btn hh_button hh_button_purple align-self-start mt-4">Contattaci su Whatsapp
+                        👈</button></a>
+                <!-- <a href="./guida.html"><button type="button"
+                        class="btn hh_button hh_button_purple align-self-start mt-4">Scarica la
+                        guida gratuita 👈</button></a> -->
             </div>
             <div class="col-md-6">
                 <img src="./src/img/hh_support.gif" alt="howhigh support" class="w-100">
             </div>
+        </div>
+    </div>
+
+    <!-- post blog -->
+    <div class="container-fluid hh_section_container">
+        <p class="hh_h1 hh_color_purple text-center">Dal nostro blog 📝</red>
+        </p>
+        <div class="row justify-content-center" id="hh_blog_section">
         </div>
     </div>
 
@@ -251,6 +305,95 @@
         </div>
     </div>
 
+    <!-- supporto -->
+    <div class="container-fluid hh_section_container" id="hh_contact_section">
+        <div class="row align-items-center">
+            <div class="col-md-8 offset-md-2">
+                <p class="hh_h1 hh_color_purple text-center">E' ora di andare <red class="hh_color_green">online?</red>
+                </p>
+                <!-- <div class="klaviyo-form-U4pM4i"></div> -->
+                <!-- Begin Mailchimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <form
+                        action="https://howhigh.us7.list-manage.com/subscribe/post?u=125d6c17c070603b82a73e915&amp;id=b0c41754b6"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                        target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="mc-field-group form-group">
+                                        <label for="mce-FNAME" class="hh_p">Nome </label>
+                                        <input type="text" value="" name="FNAME" class="hh_input form-control"
+                                            id="mce-FNAME">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mc-field-group form-group">
+                                        <label for="mce-LNAME" class="hh_p">Cognome </label>
+                                        <input type="text" value="" name="LNAME" class="hh_input form-control"
+                                            id="mce-LNAME">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mc-field-group form-group">
+                                <label for="mce-EMAIL" class="hh_p">Email <span class="asterisk">*</span>
+                                </label>
+                                <input type="email" value="" name="EMAIL" class="hh_input form-control required email"
+                                    id="mce-EMAIL">
+                            </div>
+                            <div class="mc-field-group size1of2 form-group">
+                                <label for="mce-MMERGE3" class="hh_p">Telefono <span class="asterisk">*</span>
+                                </label>
+                                <input type="text" name="MMERGE3" class="hh_input form-control required" value=""
+                                    id="mce-MMERGE3">
+                            </div>
+                            <div class="mc-field-group form-group">
+                                <label for="mce-MMERGE4" class="hh_p">Quale è il tuo budget? </label>
+                                <select name="MMERGE4" class="hh_input form-control" id="mce-MMERGE4">
+                                    <option value=""></option>
+                                    <option value="10€ - 2k">10€ - 2k</option>
+                                    <option value="2k - 5k">2k - 5k</option>
+                                    <option value="5k +">5k +</option>
+
+                                </select>
+                            </div>
+                            <div class="mc-field-group form-group">
+                                <strong class="hh_p">Di cosa hai bisogno? </strong>
+                                <ul class="list-unstyled mt-2">
+                                    <li><input type="checkbox" value="1" name="group[78677][1]"
+                                            id="mce-group[78677]-78677-0"><label for="mce-group[78677]-78677-0"
+                                            class="ml-3 hh_p">Realizzazione sito web</label></li>
+                                    <li><input type="checkbox" value="2" name="group[78677][2]"
+                                            id="mce-group[78677]-78677-1"><label class="ml-3 hh_p"
+                                            for="mce-group[78677]-78677-1">Campagne
+                                            pubblicitarie</label></li>
+                                    <li><input type="checkbox" value="4" name="group[78677][4]"
+                                            id="mce-group[78677]-78677-2"><label class="ml-3 hh_p"
+                                            for="mce-group[78677]-78677-2">Aumento
+                                            della visibilità</label></li>
+                                    <li><input type="checkbox" value="8" name="group[78677][8]"
+                                            id="mce-group[78677]-78677-3"><label class="ml-3 hh_p"
+                                            for="mce-group[78677]-78677-3">Gestione
+                                            social</label></li>
+                                </ul>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                    name="b_125d6c17c070603b82a73e915_b0c41754b6" tabindex="-1" value=""></div>
+                            <div class="clear text-center"><input type="submit" value="Invia" name="subscribe"
+                                    id="mc-embedded-subscribe" class="button px-5 hh_button btn"></div>
+                        </div>
+                    </form>
+                </div>
+                <!--End mc_embed_signup-->
+            </div>
+        </div>
+    </div>
+
     <!-- faq -->
     <div class="container-fluid hh_section_container">
         <div class="row align-items-center">
@@ -259,13 +402,13 @@
                 <div class="accordion" id="hh_faq_accordion">
                     <div class="card hh_collapse_card" id="hh_collapse_card1">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse1" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse1" aria-expanded="true"
                                     aria-controls="hh_faq_collapse1">
                                     Perché dovrei scegliere HowHigh?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon1">
                                 keyboard_arrow_down
                             </span>
@@ -305,13 +448,13 @@
                     </div>
                     <div class="card hh_collapse_card" id="hh_collapse_card7">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse7" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse7" aria-expanded="true"
                                     aria-controls="hh_faq_collapse7">
                                     Come posso contattarvi?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon7">
                                 keyboard_arrow_down
                             </span>
@@ -320,9 +463,12 @@
                         <div id="hh_faq_collapse7" class="collapse" aria-labelledby="hh_faq_title_collapse7"
                             data-parent="#hh_faq_accordion">
                             <div class="card-body hh_p">
-                                Puoi contattarci scrivendoci alla mail <a href="mailto:hello@howhigh.it"
-                                    class="hh_color_purple">hello@howhigh.it</a> o compilando il form nella
-                                pagina <a href="./contatti.html" class="hh_color_purple">contatti</a>.
+                                Puoi contattarci compilando il <a href="#hh_contact_section" class="hh_color_purple"
+                                    title="contattaci">form qui sopra</a>, scrivendoci alla mail <a
+                                    href="mailto:hello@howhigh.it" class="hh_color_purple"
+                                    title="contattaci">hello@howhigh.it</a> o su <a
+                                    href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                                    title="contattaci" class="hh_color_purple">Whatsapp</a>.
                                 <br><br>
                                 Ti risponderemo il prima possibile e se
                                 vorrai organizzeremo una chiamata completamente gratuita in cui andremo ad analizzare
@@ -332,13 +478,13 @@
                     </div>
                     <div class="card hh_collapse_card" id="hh_collapse_card2">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse2" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse2" aria-expanded="true"
                                     aria-controls="hh_faq_collapse2">
-                                    Si, ma quanto costa?
+                                    Sì, ma quanto costa?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon2">
                                 keyboard_arrow_down
                             </span>
@@ -360,13 +506,13 @@
                     </div>
                     <div class="card hh_collapse_card" id="hh_collapse_card3">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse3" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse3" aria-expanded="true"
                                     aria-controls="hh_faq_collapse3">
                                     Ho una piccola attività, può servirmi un sito web?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon3">
                                 keyboard_arrow_down
                             </span>
@@ -390,7 +536,7 @@
                                 creazione di contenuti interessanti per il tuo pubblico, ...<br>
                                 <b>Ma per questo ci siamo noi!</b>
                                 <br><br>
-                                <a class="hh_color_purple"
+                                <a title="articolo ansa" class="hh_color_purple"
                                     href="https://www.ansa.it/pressrelease/economia/2020/10/14/covid-19-ed-e-commerce-la-crescita-degli-acquisti-online_056dc908-615d-4cd4-a59e-58e887f9f4b1.html">Leggi
                                     l'articolo sull'ANSA</a>👈
                             </div>
@@ -398,13 +544,13 @@
                     </div>
                     <div class="card hh_collapse_card" id="hh_collapse_card4">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse4" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse3" aria-expanded="true"
                                     aria-controls="hh_faq_collapse4">
                                     Ho già un sito ma non ottengo risultati, perché?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon4">
                                 keyboard_arrow_down
                             </span>
@@ -419,8 +565,9 @@
                                 proposto.
                                 <br><br>
                                 Puoi contattarci scrivendoci alla mail <a href="mailto:hello@howhigh.it"
-                                    class="hh_color_purple">hello@howhigh.it</a> o compilando il form nella
-                                pagina <a href="./contatti.html" class="hh_color_purple">contatti</a> e se
+                                    class="hh_color_purple">hello@howhigh.it</a> o su <a title="contattaci"
+                                    href="https://wa.me/+393450001734?text=Vorrei%20avere%20più%20informazioni"
+                                    class="hh_color_purple">Whatsapp</a> e se
                                 vorrai organizzeremo una <b>chiamata completamente gratuita in cui andremo ad analizzare
                                     insieme il tuo business</b>.
                             </div>
@@ -428,13 +575,13 @@
                     </div>
                     <div class="card hh_collapse_card" id="hh_collapse_card5">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse5" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse5" aria-expanded="true"
                                     aria-controls="hh_faq_collapse5">
                                     E' utile fare pubblicità online?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon5">
                                 keyboard_arrow_down
                             </span>
@@ -443,7 +590,7 @@
                         <div id="hh_faq_collapse5" class="collapse" aria-labelledby="hh_faq_title_collapse5"
                             data-parent="#hh_faq_accordion">
                             <div class="card-body hh_p">
-                                Certo, ma per evitare investimenti sbaglaiti, la prima cosa da valutare quando si pensa
+                                Certo, ma per evitare investimenti sbagliati, la prima cosa da valutare quando si pensa
                                 di fare pubblicità online, come per ogni
                                 azione di marketing, è <b>quale obiettivo abbiamo e quanto possiamo investire.</b>
                                 <br><br>
@@ -461,13 +608,13 @@
                     </div>
                     <div class="card hh_collapse_card" id="hh_collapse_card6">
                         <div class="card-header hh_collapse_header d-flex align-items-center justify-content-between">
-                            <h2 class="mb-0">
+                            <p class="mb-0">
                                 <button class="btn hh_p hh_faq_title" id="hh_faq_title_collapse6" type="button"
                                     data-toggle="collapse" data-target="#hh_faq_collapse6" aria-expanded="true"
                                     aria-controls="hh_faq_collapse6">
                                     Quanto budget occorre per fare pubblicità online?
                                 </button>
-                            </h2>
+                            </p>
                             <span class="material-icons hh_faq_icon" id="hh_faq_icon6">
                                 keyboard_arrow_down
                             </span>
@@ -497,17 +644,32 @@
     <!-- footer -->
     <footer class="container-fluid hh_section_container hh_purple_bg py-5">
         <div class="row">
-            <div class="col-md-9">
-                <a href="./index.html"><img src="./src/img/logo_white.svg" alt="howhigh logo" width="120"></a>
-                <a href="mailto:hello@howhigh.it" class="hh_footer_email">
+            <div class="col-md-6">
+                <a href="./index.html" title="homepage"><img src="./src/img/logo_white.svg" alt="howhigh logo"
+                        width="120"></a>
+                <a href="mailto:hello@howhigh.it" title="contattaci" class="hh_footer_email">
                     <p class="hh_h2 hh_color_green mt-3">hello@howhigh.it</p>
                 </a>
+            </div>
+            <div class="col-md-3 my-4 my-md-0">
+                <a href="https://www.linkedin.com/company/69747077" title="linkedin"
+                    class="fa fa-linkedin hh_social_icon"></a>
+                <a href="https://www.instagram.com/howhighstudio/" title="instagram"
+                    class="fa fa-instagram hh_social_icon"></a>
+                <a href="https://www.facebook.com/howhighstudio" title="facebook"
+                    class="fa fa-facebook hh_social_icon"></a>
             </div>
             <div class="col-md-3">
                 <!-- <a href="#" class="hh_footer_link">
                     <p class="hh_label text-white">Termini e condizioni</p>
                 </a> -->
-                <a href="./privacy-policy.html" class="hh_footer_link">
+                <a href="./blog" title="blog" class="hh_footer_link">
+                    <p class="hh_label text-white">Blog</p>
+                </a>
+                <a class="hh_footer_link" title="contattaci" href="#hh_contact_section">
+                    <p class="hh_label text-white">Contattaci</p>
+                </a>
+                <a href="./privacy-policy.html" title="privacy policy" class="hh_footer_link">
                     <p class="hh_label text-white">Privacy Policy</p>
                 </a>
                 <p class="hh_label mb-0 text-white">P.I. 15728981000</p>
